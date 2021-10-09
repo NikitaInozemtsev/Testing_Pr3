@@ -1,0 +1,29 @@
+interface Expression {
+    String interpret(Context context);
+}
+class Context {
+    public String getLowerCase(String s){
+        return s.toLowerCase();
+    }
+    public String getUpperCase(String s){
+        return s.toUpperCase();
+    }
+}
+class LowerExpression implements Expression {
+    private String s;
+    public LoverExpression(String s) {
+        this.s = s;
+    }
+    public String interpret(Context context) {
+        return context.getLoverCase(s);
+    }
+}
+class UpperExpression implements Expression {
+    private String s;
+    public UpperExpression(String s) {
+        this.s = s;
+    }
+    public String interpret(Context context) {
+        return context.getUpperCase(s);
+    }
+}
